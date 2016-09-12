@@ -1,12 +1,12 @@
 ---
-title: Outils LPFP
+title: Documentation Machine/Outils LPFP
 
 language_tabs:
   - shell: common
   - python
 
 toc_footers:
-  - <a href='https://robyremzy.github.io/fabateliers/hardware/'>Outils @LPFP</a>
+  - <a href='https://lpfp.github.io'>Retour sur lpfp.github.io</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:

@@ -28,7 +28,7 @@ Les textes en dessous de 5mm de haut seront très fastidieux à mettre en place
 Tips sur Illustrator
 <aside class="notice">
 voir les tracés en pressant `Ctrl+Y`.  
-Si vos traits sont séparés, vous pouvez les combiner en utilisant la commande `pathfinder`.
+Si vos traits sont séparés, vous pouvez les combiner en utilisant la commande "contour en chemin" `Ctrl-Alt-C`.
 </aside>
 
 

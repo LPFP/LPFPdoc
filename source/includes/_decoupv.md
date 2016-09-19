@@ -66,7 +66,7 @@ cd robocut
 qmake-qt4
 make
 sudo adduser UserName lp
-sudo cp Robocut /usr/local/bin
+sudo cp robocut /usr/local/bin
 robocut
 ```
 

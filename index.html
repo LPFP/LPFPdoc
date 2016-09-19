@@ -148,8 +148,9 @@ Nous essayons de metre à disposition les marches à suivre aussi bien sur <stro
 <h3 id="le-petit-fablab-compte-3-imprimantes-3d">Le Petit FabLab compte 3 imprimantes 3D.</h3>
 
 <ul>
-<li>Zortrax mise à disposition par le <a href="http://potaufab.fr/">Pot Au Fab</a></li>
-<li>2 model de Prusa_i3 modifier et assembler par ses membres</li>
+<li><strong>Zortrax</strong> mise à disposition par le <a href="http://potaufab.fr/">Pot Au Fab</a></li>
+<li>RepRap <strong>FoldaRap</strong> mise à disposition par Sakada</li>
+<li>Dagoma <strong>DISCO EASY 200</strong></li>
 </ul>
 
 <h3 id="les-fichiers-d-39-objet-3d">Les fichiers d&#39;objet 3D</h3>
@@ -167,6 +168,7 @@ Nous essayons de metre à disposition les marches à suivre aussi bien sur <stro
 <i class="fa fa-linux"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></p>
 
 <ul>
+<li><a href="https://www.tinkercad.com/">Tinkercad</a></li>
 <li><a href="https://www.blender.org/download/">Blender</a></li>
 <li><a href="http://www.sketchup.com/fr/download">Sketchup</a></li>
 <li><a href="http://www.openscad.org/downloads.html">OpenSCAD</a></li>
@@ -179,13 +181,18 @@ Nous essayons de metre à disposition les marches à suivre aussi bien sur <stro
 <li><a href="https://3dwarehouse.sketchup.com/">sketchup warehouse</a></li>
 </ul>
 
-<p>Vérifier les volume max d&#39;impression de votre machine.
 <aside class="warning">
-Les volumes doivent être totalement fermés.<br>
-Les dépouilles doivent faire au maximum 110°
-</aside></p>
+Vérifier que les volume soient totalement fermés et le volume max d'impression de votre machine.
+</aside>
 
 <h2 id="3d-zortrax-m200">3D Zortrax m200</h2>
+
+<blockquote>
+<p>Zortrax m200 Manual/fr<br>
+<a href="https://zortrax.com/wp-content/uploads/2016/07/ZORTRAX-M200-Folder.pdf">voir le manuel</a></p>
+</blockquote>
+
+<p><img alt="zortrax" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Zortrax_logo.svg/220px-Zortrax_logo.svg.png" /></p>
 
 <h3 id="aspect-techniques">Aspect techniques</h3>
 
@@ -193,25 +200,128 @@ Les dépouilles doivent faire au maximum 110°
 <li>Dimension: &ldquo;345 x 360 x 430000 mm&rdquo;</li>
 <li>Volume_maximum_impression: &ldquo;200 x 200 x 180 mm&rdquo;</li>
 <li>Lecteur_de_carte: oui</li>
-<li>Précision: 25Micron</li>
+<li>Précision: 25 microns</li>
 </ul>
 
-<h3 id="format-stl-du-fichier-pour-impression">format .STL du fichier pour impression</h3>
+<h3 id="format-propri-taire">Format propriétaire</h3>
 
-<p>(éclaircir le pourquoi du 3D&gt;STL puis STL&gt;Gcode)</p>
-
-<p>Liens vers tuto pour exporter le fichier au format <code class="prettyprint">.stl</code> <a href="https://fr.wikipedia.org/wiki/Fichier_de_st%C3%A9r%C3%A9olithographie">&ldquo;stéréolithographie&rdquo;</a> avec  <a href="https://www.flossmanualsfr.net/blender-pour-limpression-3d/ch018_exporter-au-format-stl-et-obj">Blender</a>, <a href="https://extensions.sketchup.com/en/content/sketchup-stl">sketchup</a></p>
-
-<p>note avec Rhinoceros:<br>
-Avantage temps de compilation 3D&gt;STL puis STL&gt;Gcode mais fichier moins précis.
-Avantage Solidworks fichier STL fidèle au modèle 3D temps de compilation 3D&gt;STL très long STL&gt;Gcode encore plus long.
+<p>Edition du fichier sur logiciel Zortrax
 <aside class="notice">
-Le fichier doit tenir dans un volume max de 200x200x180 mm.<br>
-Dans le cas contraire, prévoir un assemblage mécanique ou par collage.</p>
-
-<p>Exporter en <code class="prettyprint">stl</code> options <code class="prettyprint">ASCII</code> (fichier moins lourd)<br>
-Nom du fichier sans accent ni caractères spéciaux.
+faire attention aux parametres de precisions<br>
+et au type de file utiliser
 </aside></p>
+
+<p>Suivant le design de la création, il se peut que les lignes de forces du volume,
+mettent à mal l&#39;impression.<br>
+Des problemes de &ldquo;courbages&quot;et d&#39;aparitions d&#39;artefacts peuvent survenir.</p>
+
+<ul>
+<li>sauvegarder sur carte SD le fichier 3D <code class="prettyprint">nom_du_fichier-temps-impression.ztl</code></li>
+<li>charger la carte SD dans la Zortrax</li>
+<li>naviguer dans l&#39;ecran LCD fichier/fichier.ztl</li>
+<li>lancer l&#39;impression</li>
+</ul>
+
+<h2 id="reprap-foldarap">RepRap FoldaRap</h2>
+
+<blockquote>
+<p>FoldaRap Build Manual/fr<br>
+<a href="http://reprap.org/wiki/FoldaRap_Build_Manual/fr">voir le manuel en FR</a></p>
+</blockquote>
+
+<p><img alt="FoldaRap" src="http://reprap.org/mediawiki/reprap_logo.png" /></p>
+
+<h3 id="aspects-techniques">Aspects techniques</h3>
+
+<ul>
+<li>Dimension: &quot;335 x 348 x 318 mm&rdquo;</li>
+<li>Volume_maximum_impression: &ldquo;140 x 140 x 140 mm&rdquo;</li>
+<li>Lecteur_de_carte: non</li>
+<li>Précision: 50 microns</li>
+</ul>
+<pre class="highlight shell"><code>tar -xzf repetierHostLinux.tgz
+<span class="nb">cd </span>RepetierHost
+sh configureFirst.sh
+sudo usermod -a -G dialout UserName
+</code></pre>
+
+<h3 id="logiciel-repetier-host-pronterface">Logiciel Repetier Host / Pronterface</h3>
+
+<p>l&#39;installation du logiciel Repetier Host se fait sur toutes les pateformes.  </p>
+
+<p>Voir les paquets sur :<br>
+<a href="https://www.repetier.com/download-now/">https://www.repetier.com/download-now/</a></p>
+<pre class="highlight shell"><code>sudo apt-get install monodevelop
+</code></pre>
+<pre class="highlight shell"><code>curl -O http://dl.slic3r.org/linux/slic3r-linux-x86-1-2-9-stable.tar.gz
+tar zxvf slic3r-linux-x86-1-2-9-stable.tar.gz
+</code></pre>
+
+<blockquote>
+<p>déplacer le fichier Slic3r dans le repertoire RepetierHost</p>
+</blockquote>
+<pre class="highlight shell"><code>mv slic3r ./RepetierHost
+</code></pre>
+
+<p>Il y a cependant 2 choses à vérifier.</p>
+
+<ul>
+<li>la dépendance avec <a href="http://www.mono-project.com/docs/getting-started/install/">Mono Develop</a></li>
+<li>l&#39;installation du trancher <a href="http://slic3r.org/download">Slic3r</a></li>
+</ul>
+
+<p><img alt="repetier3D" src="images/repetier/repetier_3D.png" /></p>
+
+<p>Brancher la FoldaRap en USB<br>
+Mise sous tension de la FoldaRap.  </p>
+
+<p>Dans RepetierHost clicker sur <code class="prettyprint">connecter</code><br>
+Cliquer sur l&#39;onglet <code class="prettyprint">contrôle manuel</code></p>
+
+<blockquote>
+<p>Historique et résolution des problèmes rencontrer<br>
+<em>18/09/2016</em> <strong>LPFP sprint imprimantes 3D</strong> <a href="https://lpfp.github.io/2016/sprint-FoldaRap-3Dprint/">Blog post</a></p>
+</blockquote>
+
+<ul>
+<li>vérifier les axes x y z
+
+<ul>
+<li>click sur icon <code class="prettyprint">Home x/y/x</code></li>
+</ul></li>
+</ul>
+
+<p><img alt="repetier_xyz" src="images/repetier/repetier_xyz.png" /></p>
+
+<ul>
+<li>calibrer la temperature <code class="prettyprint">Extrudeur 1</code> à 195°C (Suivant le type de file)
+
+<ul>
+<li>mettre en route la chauffe de l&#39;extrudeur</li>
+<li>attendre que la jauge arrive à 195°C</li>
+<li>vérifier la fusion &hellip;</li>
+</ul></li>
+</ul>
+
+<p><img alt="repetier3D" src="images/repetier/repetier_buse.png" /></p>
+
+<h2 id="dagoma-disco-easy-200">Dagoma Disco Easy 200</h2>
+
+<blockquote>
+<p>Dagoma Disco Easy 200<br>
+<a href="https://www.lesimprimantes3d.fr/forum/41-dagoma">voir aide</a></p>
+</blockquote>
+
+<p><img alt="Dagoma" src="http://www.dagoma.fr/bundles/dagomadagoma/images/logo-dagoma.png" /></p>
+
+<h3 id="aspects-techniques">Aspects techniques</h3>
+
+<ul>
+<li>Dimension: &ldquo;370 x 370 x 370 mm&rdquo;</li>
+<li>Volume_maximum_impression: &ldquo;200 x 200 x 200 mm&rdquo;</li>
+<li>Lecteur_de_carte: oui (micro SD)</li>
+<li>Précision: 100 microns</li>
+</ul>
 
 <blockquote>
 <p>Installer le packet Pronterface Win ou OSX</p>
@@ -231,11 +341,15 @@ sudo apt-get install python-serial python-wxgtk2.8 python-pyglet python-numpy cy
 git clone https://github.com/kliment/Printrun.git
 </code></pre>
 
-<h3 id="role-de-pronterface-console-d-39-impression">(role de Pronterface. console d&#39;impression?</h3>
+<hr>
+
+<p>Brouillion</p>
+
+<h3 id="logiciel-pronterface-repetier-host">Logiciel Pronterface / Repetier Host</h3>
 
 <p>Ouvrir Pronterface</p>
 
-<p><img alt="zortrax1" src="images/zortrax/zortrax1.png" /></p>
+<p><img alt="pronterface1" src="images/pronterface/pronterface1.png" /></p>
 
 <p>Vérifier le port com04 ou 06
      la vitesse 250000
@@ -250,27 +364,61 @@ Cliquer sur «Fichier&gt;Slicing Setting»
     La fenêtre de Sl3cer s’ouvre, chaque onglet correspond aux réglagles machines (remplissage, nombre de contour, dimensions du plateaux).
 Cliquer sur Ouvrir, aller chercher le fichier stl.</p>
 
-<p><img alt="zortrax2" src="images/zortrax/zortrax2.png" /></p>
+<p><img alt="pronterface2" src="images/pronterface/pronterface2.png" /></p>
 
-<p><img alt="zortrax3" src="images/zortrax/zortrax3.png" /></p>
+<p><img alt="pronterface3" src="images/pronterface/pronterface3.png" /></p>
+
+<h3 id="format-stl-du-fichier-pour-impression">format .STL du fichier pour impression</h3>
+
+<p>(éclaircir le pourquoi du 3D&gt;STL puis STL&gt;Gcode)</p>
+
+<p>Liens vers tuto pour exporter le fichier au format <code class="prettyprint">.stl</code> <a href="https://fr.wikipedia.org/wiki/Fichier_de_st%C3%A9r%C3%A9olithographie">&ldquo;stéréolithographie&rdquo;</a> avec  <a href="https://www.flossmanualsfr.net/blender-pour-limpression-3d/ch018_exporter-au-format-stl-et-obj">Blender</a>, <a href="https://extensions.sketchup.com/en/content/sketchup-stl">sketchup</a></p>
+
+<p>note avec Rhinoceros:<br>
+Avantage temps de compilation 3D&gt;STL puis STL&gt;Gcode mais fichier moins précis.
+Avantage Solidworks fichier STL fidèle au modèle 3D temps de compilation 3D&gt;STL très long STL&gt;Gcode encore plus long.
+<aside class="notice">
+Le fichier doit tenir dans un volume max de 200x200x180 mm.<br>
+Dans le cas contraire, prévoir un assemblage mécanique ou par collage.</p>
+
+<p>Exporter en <code class="prettyprint">stl</code> options <code class="prettyprint">ASCII</code> (fichier moins lourd)<br>
+Nom du fichier sans accent ni caractères spéciaux.
+</aside></p>
 
           <h1 id="d-coupeuse-vinyle">Découpeuse vinyle</h1>
 
-<p>Le FabLab dispose d&#39;une découpeuse vinyle.</p>
+<p><img src="http://www.silhcdn.com/2/i/regions/2/logo.png" /><br>
+<strong>Shilhouette CAMEO</strong></p>
+
+<blockquote>
+<p>Aide Manuel CAMEO<br>
+<a href="http://edutechwiki.unige.ch/en/Silhouette_Cameo">http://edutechwiki.unige.ch/en/Silhouette_Cameo</a></p>
+</blockquote>
 
 <h3 id="aspect-techniques">Aspect techniques</h3>
 
 <ul>
 <li>Format papier/vinyle max: A3</li>
-<li>Epaisseur maximum:</li>
+<li>Largeur du tapis: 30.5 cm</li>
+<li>connection: USB</li>
 </ul>
 
-<h3 id="les-fichiers">Les fichiers</h3>
+<h3 id="logiciel-et-fichiers">Logiciel et fichiers</h3>
+
+<blockquote>
+<p>Logiciel propriétaire Silhouette<br>
+<a href="http://silhouetteamerica.com/software">http://silhouetteamerica.com/software</a></p>
+</blockquote>
+
+<p><strong>Logiciel de dessin et d&#39;impression</strong><br>
+Silhouette Studio®</p>
 
 <p><strong>Logiciel de dessin vectoriel (exemple)</strong></p>
 
 <p><em>Windows/Apple</em><br>
 <a href="http://www.adobe.com/fr/products/illustrator.html">Illustrator</a></p>
+<pre class="highlight shell"><code>sudo apt-get install inkscape
+</code></pre>
 
 <p><em>Windows/Apple/Linux</em><br>
 <a href="https://inkscape.org/fr/telecharger/">Inkscape</a></p>
@@ -282,7 +430,7 @@ Pensez à combiner les formes et à vectoriser les polices et les tracés.<br>
 Les textes en dessous de 5mm de haut seront très fastidieux à mettre en place
 </aside></p>
 
-<p>Tips sur Illustrator
+<p>Tips sur Inkscape
 <aside class="notice">
 voir les tracés en pressant <code class="prettyprint">Ctrl+Y</code>.<br>
 Si vos traits sont séparés, vous pouvez les combiner en utilisant la commande &ldquo;contour en chemin&rdquo; <code class="prettyprint">Ctrl-Alt-C</code>.
@@ -290,11 +438,53 @@ Si vos traits sont séparés, vous pouvez les combiner en utilisant la commande 
 
 <h3 id="envoyer-le-fichier-pour-la-d-coupe">Envoyer le fichier pour la découpe</h3>
 
-<p>Depuis quelle logiciel, quelle logiciel peut le faire?</p>
+<p><img alt="repetier3D" src="images/cameo/cameo_lcd.jpg" /></p>
 
-<p>(comment Allumer séléctionner sur la machine)</p>
+<ul>
+<li>allumage</li>
+<li>ecran LCD: <code class="prettyprint">chargement du tapis de coupe</code></li>
+<li>Logiciel Shilhouette (charger/faire le .SVG):
 
-<p>(étapes)</p>
+<ul>
+<li>cliquer sur <code class="prettyprint">parametre de découpeuse</code> (standard ou avancer)</li>
+</ul></li>
+<li>ecran LCD découpeuse: cliquer sur <code class="prettyprint">envoyer vers silhouette</code></li>
+<li>attendre que la découpe se finisse</li>
+<li>ecran LCD découpeuse: cliquer sur <code class="prettyprint">décharger</code></li>
+</ul>
+
+<blockquote>
+<p>Piste pour robocut Linux<br>
+http://robocut.org/<br>
+https://github.com/nosliwneb/robocut/issues<br>
+https://github.com/Timmmm/robocut<br>
+http://custom.ultramini.net/robocut-compatible-with-silhouette-cameo/</p>
+</blockquote>
+<pre class="highlight shell"><code>sudo apt-get install libqt4-dev libusb-1.0-0-dev
+git clone https://github.com/LPFP/robocut.git
+<span class="nb">cd </span>robocut
+qmake-qt4
+make
+sudo adduser UserName lp
+sudo cp Robocut /usr/local/bin
+robocut
+</code></pre>
+
+<h3 id="installation-linux-robocut-pour-la-cameo">Installation Linux Robocut pour la CAMEO</h3>
+
+<p>Si l&#39;installation ne marche pas avec le model CAMEO
+il faut modier avec:</p>
+
+<ul>
+<li>forker le repo git robocut</li>
+<li>modifier le fichier <code class="prettyprint">Plotter.h</code> ligne 53</li>
+</ul>
+
+<p><code class="prettyprint">const int PRODUCT_ID_SILHOUETTE_CAMEO =  0x1121;</code><br>
+par<br>
+<code class="prettyprint">const int PRODUCT_ID_SILHOUETTE_CAMEO =  0x112B;</code></p>
+
+<p><em>si non voir les commentaires des fichiers Plotter et vérifier les informations et ID de la CAMEO dont vous disposez.</em></p>
 
           <h1 id="raspberry">Raspberry</h1>
 

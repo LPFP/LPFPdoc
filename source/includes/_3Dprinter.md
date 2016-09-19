@@ -69,8 +69,9 @@ Des problemes de "courbages"et d'aparitions d'artefacts peuvent survenir.
 
 ## RepRap FoldaRap
 
->FoldaRap Build Manual/fr  
->[voir le manuel en FR](https://reprap.org/wiki/FoldaRap_Build_Manual/fr)
+>FoldaRap [voir le manuel en FR](https://reprap.org/wiki/FoldaRap_Build_Manual/fr)  
+>Historique et résolution des problèmes rencontrer  
+>*18/09/2016* **LPFP sprint imprimantes 3D** [Blog post](https://lpfp.github.io/2016/sprint-FoldaRap-3Dprint/)
 
 ![FoldaRap](../images/logo/reprap_logo.png)
 
@@ -124,9 +125,6 @@ Mise sous tension de la FoldaRap.
 Dans RepetierHost clicker sur `connecter`  
 Cliquer sur l'onglet `contrôle manuel`
 
->Historique et résolution des problèmes rencontrer  
->*18/09/2016* **LPFP sprint imprimantes 3D** [Blog post](https://lpfp.github.io/2016/sprint-FoldaRap-3Dprint/)
-
 * vérifier les axes x y z
   - click sur icon `Home x/y/x`
 
@@ -142,13 +140,11 @@ Cliquer sur l'onglet `contrôle manuel`
 
 ## Dagoma Disco Easy 200
 
->Dagoma Disco Easy 200  
->[voir aide](https://www.lesimprimantes3d.fr/forum/41-dagoma)
-
-![Dagoma](https://www.dagoma.fr/bundles/dagomadagoma/images/logo-dagoma.png)
-
+>Dagoma Disco Easy 200 [voir aide](https://www.lesimprimantes3d.fr/forum/41-dagoma)  
 >Historique et résolution des problèmes rencontrer  
 >*18/09/2016* **LPFP sprint imprimantes 3D** [Blog post](https://lpfp.github.io/2016/sprint-FoldaRap-3Dprint/)
+
+![Dagoma](https://www.dagoma.fr/bundles/dagomadagoma/images/logo-dagoma.png)
 
 ### Aspects techniques
 

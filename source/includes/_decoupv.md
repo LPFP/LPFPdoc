@@ -57,11 +57,7 @@ Si vos traits sont séparés, vous pouvez les combiner en utilisant la commande 
 * attendre que la découpe se finisse
 * ecran LCD découpeuse: cliquer sur `décharger`
 
->Piste pour robocut Linux  
->http://robocut.org/  
->https://github.com/nosliwneb/robocut/issues  
->https://github.com/Timmmm/robocut  
->http://custom.ultramini.net/robocut-compatible-with-silhouette-cameo/
+> cd /home/user/mon_dossier/
 
 ```shell
 sudo apt-get install libqt4-dev libusb-1.0-0-dev
@@ -76,8 +72,17 @@ robocut
 
 ### Installation Linux Robocut pour la CAMEO
 
+Placez vous dans un dossier pour accueillir le logiciel Robocut.  
+Executer les commandes ci-contre.
+
 Si l'installation ne marche pas avec le model CAMEO
 il faut modier avec:
+
+>Piste pour robocut Linux  
+>http://robocut.org/  
+>https://github.com/nosliwneb/robocut/issues  
+>https://github.com/Timmmm/robocut  
+>http://custom.ultramini.net/robocut-compatible-with-silhouette-cameo/
 
 * forker le repo git robocut
 * modifier le fichier `Plotter.h` ligne 53

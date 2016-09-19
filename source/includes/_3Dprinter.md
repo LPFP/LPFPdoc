@@ -70,9 +70,9 @@ Des problemes de "courbages"et d'aparitions d'artefacts peuvent survenir.
 ## RepRap FoldaRap
 
 >FoldaRap Build Manual/fr  
->[voir le manuel en FR](http://reprap.org/wiki/FoldaRap_Build_Manual/fr)
+>[voir le manuel en FR](https://reprap.org/wiki/FoldaRap_Build_Manual/fr)
 
-![FoldaRap](http://reprap.org/mediawiki/reprap_logo.png)
+![FoldaRap](../images/logo/reprap_logo.png)
 
 ### Aspects techniques
 
@@ -145,7 +145,7 @@ Cliquer sur l'onglet `contrôle manuel`
 >Dagoma Disco Easy 200  
 >[voir aide](https://www.lesimprimantes3d.fr/forum/41-dagoma)
 
-![Dagoma](http://www.dagoma.fr/bundles/dagomadagoma/images/logo-dagoma.png)
+![Dagoma](https://www.dagoma.fr/bundles/dagomadagoma/images/logo-dagoma.png)
 
 ### Aspects techniques
 

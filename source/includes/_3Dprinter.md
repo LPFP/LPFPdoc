@@ -147,6 +147,9 @@ Cliquer sur l'onglet `contrôle manuel`
 
 ![Dagoma](https://www.dagoma.fr/bundles/dagomadagoma/images/logo-dagoma.png)
 
+>Historique et résolution des problèmes rencontrer  
+>*18/09/2016* **LPFP sprint imprimantes 3D** [Blog post](https://lpfp.github.io/2016/sprint-FoldaRap-3Dprint/)
+
 ### Aspects techniques
 
 * Dimension: "370 x 370 x 370 mm"

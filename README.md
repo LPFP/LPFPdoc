@@ -1,9 +1,13 @@
 # Documentation LPFP
 
-Aller dans le repertoire `source/includes` et copier coller le contenu en syntax Markdown.
-envoyer les modifications soit avec une pull request ou à un fabmanager au lab ou sur Slack.
+**Envoyer une modification facile par Github**
 
-
+* Aller dans le repertoire `source/includes`
+* modifier le fichier `_exemple.md`
+* ou modifier directement le `fichier.md` si vous etes sur de ce que vous faites
+* envoyer les modifications soit avec
+  - une pull request
+  - à un fabmanager au lab ou sur Slack.
 
 **installation en local**
 
@@ -36,3 +40,5 @@ bundle exec middleman server
 ouvrir votre navigateur:
 
 >http://localhost:4567
+
+vous pouvez modifier dans votre editeur préférer les `fichiers.md` et voir en live dans votre navigateur les modifications, ou apres un refresh `F5`.
